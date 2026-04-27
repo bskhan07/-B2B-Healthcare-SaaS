@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "paths": {
+      "@healthcare/ui": ["./packages/ui/src"],
+      "@healthcare/theme": ["./packages/theme/src"],
+      "@healthcare/hooks": ["./packages/hooks/src"],
+      "@healthcare/utils": ["./packages/utils/src"],
+      "@healthcare/types": ["./packages/types/src"],
+      "@healthcare/api-client": ["./packages/api-client/src"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

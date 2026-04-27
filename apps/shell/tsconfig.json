@@ -1,0 +1,43 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@healthcare/types": ["../../packages/types/src"],
+      "@healthcare/utils": ["../../packages/utils/src"],
+      "@healthcare/hooks": ["../../packages/hooks/src"],
+      "@healthcare/theme": ["../../packages/theme/src"],
+      "@healthcare/ui": ["../../packages/ui/src"],
+      "@healthcare/api-client": ["../../packages/api-client/src"]
+    },
+    "rootDir": "../../"
+  },
+  "include": ["src", "vite-env.d.ts"],
+  "references": [
+    { "path": "../../packages/types" },
+    { "path": "../../packages/utils" },
+    { "path": "../../packages/hooks" },
+    { "path": "../../packages/theme" },
+    { "path": "../../packages/ui" },
+    { "path": "../../packages/api-client" }
+  ]
+}

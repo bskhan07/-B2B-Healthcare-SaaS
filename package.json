@@ -1,0 +1,24 @@
+{
+  "name": "healthcare-saas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "B2B Healthcare SaaS - Micro-frontend Architecture",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/shell",
+    "dev:shell": "npm run dev --workspace=apps/shell",
+    "dev:dashboard": "npm run dev --workspace=apps/dashboard",
+    "dev:all": "npm run dev --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "build:packages": "npm run build --workspace=packages/types --workspace=packages/utils --workspace=packages/hooks --workspace=packages/theme --workspace=packages/ui --workspace=packages/api-client",
+    "lint": "npm run lint --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
