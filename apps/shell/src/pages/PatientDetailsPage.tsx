@@ -516,7 +516,7 @@ function PatientModal({ patient, onClose }: { patient?: Patient | null; onClose:
               <label className="text-sm font-semibold">Gender</label>
               <Select 
                 value={formik.values.gender} 
-                onValueChange={(val) => formik.setFieldValue('gender', val)}
+                onValueChange={(val: string) => formik.setFieldValue('gender', val)}
               >
                 <SelectTrigger className="w-full h-11 bg-muted/30 rounded-xl">
                   <SelectValue placeholder="Select gender" />
@@ -532,7 +532,7 @@ function PatientModal({ patient, onClose }: { patient?: Patient | null; onClose:
               <label className="text-sm font-semibold">Status</label>
               <Select 
                 value={formik.values.status} 
-                onValueChange={(val) => formik.setFieldValue('status', val)}
+                onValueChange={(val: string) => formik.setFieldValue('status', val)}
               >
                 <SelectTrigger className="w-full h-11 bg-muted/30 rounded-xl">
                   <SelectValue placeholder="Select status" />
